@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@chainlink/env-enc").config();
 require("@nomicfoundation/hardhat-verify");
+require("./tasks")
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const PRIVATE_KEY_1 = process.env.PRIVATE_KEY_1;
@@ -19,8 +20,6 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: {
-      sepolia: ETHERSCAN_API_KEY,
-    },
+    apiKey: ETHERSCAN_API_KEY,
   },
 };
